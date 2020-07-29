@@ -24,6 +24,10 @@
 	<string>MultipleWidgets needs access to the Media library to Show All Media count</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>MultipleWidgets needs access to the photo library to help you manage space</string>
+	<key>NSUserActivityTypes</key>
+	<array>
+		<string>SampleIntentConfigIntent</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

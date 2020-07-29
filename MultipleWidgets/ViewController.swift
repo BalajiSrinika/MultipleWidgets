@@ -32,11 +32,9 @@ class ViewController: UIViewController {
              }
          })
         
-       let get = GetTotalGallery().allPhotos
-        print(get.count)
-        
-        let get2 = GetPhotoAsset().allPhotos
-         print(get2.count)
+        let getPhotos = GetTotalGallery().allPhotos
+        print(getPhotos.count)
+      
     }
 
 

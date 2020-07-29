@@ -7,6 +7,8 @@
 
 import UIKit
 import Photos
+import WatchConnectivity
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

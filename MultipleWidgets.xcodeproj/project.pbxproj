@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F314B9DD24D1A40000323D38 /* SampleTimelineWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = F389F37C24CEA9BC00D88BB5 /* SampleTimelineWidget.swift */; };
+		F314B9EE24D1A65D00323D38 /* SampleIntentConfig.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = F3F6128724D1979F00A29C48 /* SampleIntentConfig.intentdefinition */; };
+		F314B9EF24D1A65E00323D38 /* SampleIntentConfig.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = F3F6128724D1979F00A29C48 /* SampleIntentConfig.intentdefinition */; };
+		F314B9F024D1A66200323D38 /* SampleIntentWidgets.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F6128524D1947000A29C48 /* SampleIntentWidgets.swift */; };
+		F32E95DF24D1A11F00C11CDF /* FetchingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F389F38824CEC20100D88BB5 /* FetchingData.swift */; };
+		F32E95E024D1A13F00C11CDF /* FetchingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F389F38824CEC20100D88BB5 /* FetchingData.swift */; };
 		F389F34224CEA87C00D88BB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F389F34124CEA87C00D88BB5 /* AppDelegate.swift */; };
 		F389F34424CEA87C00D88BB5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F389F34324CEA87C00D88BB5 /* SceneDelegate.swift */; };
 		F389F34624CEA87C00D88BB5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F389F34524CEA87C00D88BB5 /* ViewController.swift */; };
@@ -17,12 +23,9 @@
 		F389F36424CEA87E00D88BB5 /* MultipleWidgetsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F389F36324CEA87E00D88BB5 /* MultipleWidgetsUITests.swift */; };
 		F389F37824CEA9BC00D88BB5 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F389F37724CEA9BC00D88BB5 /* WidgetKit.framework */; };
 		F389F37A24CEA9BC00D88BB5 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F389F37924CEA9BC00D88BB5 /* SwiftUI.framework */; };
-		F389F37D24CEA9BC00D88BB5 /* SampleTimelineWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = F389F37C24CEA9BC00D88BB5 /* SampleTimelineWidget.swift */; };
 		F389F37F24CEA9BF00D88BB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F389F37E24CEA9BF00D88BB5 /* Assets.xcassets */; };
 		F389F38324CEA9BF00D88BB5 /* SampleTimelineWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F389F37524CEA9BC00D88BB5 /* SampleTimelineWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		F389F38924CEC20100D88BB5 /* FetchingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F389F38824CEC20100D88BB5 /* FetchingData.swift */; };
-		F389F38B24CEC24000D88BB5 /* FetchingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F389F38824CEC20100D88BB5 /* FetchingData.swift */; };
-		F389F38D24CF035D00D88BB5 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = F389F38C24CF035D00D88BB5 /* test.swift */; };
+		F3F6128424D188AF00A29C48 /* AdditionalTimelineWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F6128124D1556700A29C48 /* AdditionalTimelineWidget.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,7 +88,9 @@
 		F389F37E24CEA9BF00D88BB5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F389F38024CEA9BF00D88BB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F389F38824CEC20100D88BB5 /* FetchingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchingData.swift; sourceTree = "<group>"; };
-		F389F38C24CF035D00D88BB5 /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
+		F3F6128124D1556700A29C48 /* AdditionalTimelineWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionalTimelineWidget.swift; sourceTree = "<group>"; };
+		F3F6128524D1947000A29C48 /* SampleIntentWidgets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleIntentWidgets.swift; sourceTree = "<group>"; };
+		F3F6128724D1979F00A29C48 /* SampleIntentConfig.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = SampleIntentConfig.intentdefinition; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,7 +156,6 @@
 				F389F34124CEA87C00D88BB5 /* AppDelegate.swift */,
 				F389F34324CEA87C00D88BB5 /* SceneDelegate.swift */,
 				F389F34524CEA87C00D88BB5 /* ViewController.swift */,
-				F389F38C24CF035D00D88BB5 /* test.swift */,
 				F389F34724CEA87C00D88BB5 /* Main.storyboard */,
 				F389F34A24CEA87E00D88BB5 /* Assets.xcassets */,
 				F389F34C24CEA87E00D88BB5 /* LaunchScreen.storyboard */,
@@ -192,6 +196,9 @@
 			isa = PBXGroup;
 			children = (
 				F389F37C24CEA9BC00D88BB5 /* SampleTimelineWidget.swift */,
+				F3F6128124D1556700A29C48 /* AdditionalTimelineWidget.swift */,
+				F3F6128524D1947000A29C48 /* SampleIntentWidgets.swift */,
+				F3F6128724D1979F00A29C48 /* SampleIntentConfig.intentdefinition */,
 				F389F37E24CEA9BF00D88BB5 /* Assets.xcassets */,
 				F389F38024CEA9BF00D88BB5 /* Info.plist */,
 			);
@@ -370,8 +377,8 @@
 				F389F34624CEA87C00D88BB5 /* ViewController.swift in Sources */,
 				F389F34224CEA87C00D88BB5 /* AppDelegate.swift in Sources */,
 				F389F34424CEA87C00D88BB5 /* SceneDelegate.swift in Sources */,
-				F389F38D24CF035D00D88BB5 /* test.swift in Sources */,
-				F389F38924CEC20100D88BB5 /* FetchingData.swift in Sources */,
+				F32E95E024D1A13F00C11CDF /* FetchingData.swift in Sources */,
+				F314B9EE24D1A65D00323D38 /* SampleIntentConfig.intentdefinition in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,8 +402,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F389F37D24CEA9BC00D88BB5 /* SampleTimelineWidget.swift in Sources */,
-				F389F38B24CEC24000D88BB5 /* FetchingData.swift in Sources */,
+				F314B9F024D1A66200323D38 /* SampleIntentWidgets.swift in Sources */,
+				F3F6128424D188AF00A29C48 /* AdditionalTimelineWidget.swift in Sources */,
+				F32E95DF24D1A11F00C11CDF /* FetchingData.swift in Sources */,
+				F314B9EF24D1A65E00323D38 /* SampleIntentConfig.intentdefinition in Sources */,
+				F314B9DD24D1A40000323D38 /* SampleTimelineWidget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
