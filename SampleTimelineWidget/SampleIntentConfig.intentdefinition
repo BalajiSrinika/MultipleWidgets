@@ -45,6 +45,16 @@
 					<key>INEnumValueName</key>
 					<string>Videos</string>
 				</dict>
+				<dict>
+					<key>INEnumValueDisplayName</key>
+					<string>screenshot</string>
+					<key>INEnumValueDisplayNameID</key>
+					<string>ecIfke</string>
+					<key>INEnumValueIndex</key>
+					<integer>3</integer>
+					<key>INEnumValueName</key>
+					<string>screenshot</string>
+				</dict>
 			</array>
 		</dict>
 	</array>

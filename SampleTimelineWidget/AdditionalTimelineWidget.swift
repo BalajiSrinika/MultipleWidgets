@@ -57,14 +57,18 @@ struct AdditionalTimelineWidgetEntryView : View {  // bb
                         .overlay(Circle().stroke(Color.blue, lineWidth: 4)
                         )
                 }
-                .padding().foregroundColor(.white)
+                .padding()
+                .foregroundColor(.white)
                 .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
                 VStack {
                     Text("Videos").font(.largeTitle)
                     Text("\(entry.totgallery.allVideos.count)").padding().font(.largeTitle)
                         .overlay(Circle().stroke(Color.blue, lineWidth: 4)
                         )
-                }.padding().frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
+                }
+                .padding()
+                .foregroundColor(.white)
+                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
             }
             .foregroundColor(.white)
             .background(LinearGradient(gradient: Gradient(colors: [.black]), startPoint: .top, endPoint: .bottom))

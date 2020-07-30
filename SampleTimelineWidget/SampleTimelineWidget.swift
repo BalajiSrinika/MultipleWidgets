@@ -70,6 +70,7 @@ struct SampleTimelineWidgetEntryView : View {  // bb
             .background(Color.pink)
             
         default:
+            
             ZStack {
                 HStack {
                     HStack {
@@ -87,7 +88,7 @@ struct SampleTimelineWidgetEntryView : View {  // bb
                     }.padding(.all , 10)
                     .frame(alignment: .center)
                     .padding(.top,10)
-                    
+
                     HStack{
                         VStack {
                             Text("Photos").font(Font.largeTitle.bold())

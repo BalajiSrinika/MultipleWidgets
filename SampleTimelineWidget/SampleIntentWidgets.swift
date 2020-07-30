@@ -17,7 +17,7 @@ struct SampleIntentProvider: IntentTimelineProvider {
     typealias Intent = SampleIntentConfigIntent
     
     func snapshot(for configuration: SampleIntentConfigIntent, with context: Context, completion: @escaping (SampleIntentSimpleEntry) -> ()) {
-        let entry = SampleIntentSimpleEntry(date: Date(), configuration: configuration, totgallery: GetTotalGallery.getAll())
+        let entry = SampleIntentSimpleEntry(date: Date(), configuration: configuration, totgallery: GetTotalGallery.getAll(), gallery: GetGallery.getAllPhotos())
         completion(entry)
     }
     
@@ -29,26 +29,26 @@ struct SampleIntentProvider: IntentTimelineProvider {
         
         switch selected {
         case 1:
-            let entry = SampleIntentSimpleEntry(date: Date(), configuration: configuration, totgallery: GetTotalGallery.getAll())
+            let entry = SampleIntentSimpleEntry(date: Date(), configuration: configuration, totgallery: GetTotalGallery.getAll(), gallery: GetGallery.getAllPhotos())
             entries.append(entry)
             let timeline = Timeline(entries: entries, policy: .atEnd)
             completion(timeline)
             break;
         case 2:
-            let entry = SampleIntentSimpleEntry(date: Date(), configuration: configuration,totgallery: GetTotalGallery.getAll())
+            let entry = SampleIntentSimpleEntry(date: Date(), configuration: configuration,totgallery: GetTotalGallery.getAll(), gallery: GetGallery.getAllVideos())
             entries.append(entry)
             let timeline = Timeline(entries: entries, policy: .atEnd)
             completion(timeline)
             break;
         case 3:
-            let entry = SampleIntentSimpleEntry(date: Date(), configuration: configuration, totgallery: GetTotalGallery.getAll())
+            let entry = SampleIntentSimpleEntry(date: Date(), configuration: configuration, totgallery: GetTotalGallery.getAll(), gallery: GetGallery.getAllScreenShot())
             entries.append(entry)
             let timeline = Timeline(entries: entries, policy: .atEnd)
             completion(timeline)
             break;
         default:
             if selected != 0 {
-                let entry = SampleIntentSimpleEntry(date: Date(), configuration: configuration,totgallery: GetTotalGallery.getAll())
+                let entry = SampleIntentSimpleEntry(date: Date(), configuration: configuration, totgallery: GetTotalGallery.getAll(), gallery: GetGallery.getAllPhotos())
                 entries.append(entry)
                 let timeline = Timeline(entries: entries, policy: .atEnd)
                 completion(timeline)
@@ -65,6 +65,7 @@ struct SampleIntentSimpleEntry: TimelineEntry {
     public let date: Date
     public let configuration: SampleIntentConfigIntent
     let totgallery : GetTotalGallery
+    let gallery : GetGallery
 }
 
 struct SampleIntentPlaceholderView : View {
@@ -80,117 +81,70 @@ struct SampleIntentWidgetsEntryView : View {  // bb
     
 
     @ViewBuilder
-    var body: some View {  // bb
+    var body: some View {
         switch family {
         case .systemSmall:
             ZStack{
-//                VStack(alignment : .center){
-//                    let data = entry.gallery.Details.asset
-//                    let img = getAssetThumbnail(assets: data as! [PHAsset])
-//                    let randomInt = Int.random(in: 1..<img.count)
-//                    Image(uiImage: img[randomInt])
-//                        .resizable()
-//                        .aspectRatio(contentMode: .fit)
-//                        .frame(width: 100, height: 70, alignment: .center)
-//                        .clipped()
-//                        .shadow(radius: 2)
-//                        .cornerRadius(5.0)
-//                    HStack {
-//                        Text("\(entry.gallery.Details.displayName!)").font(Font.headline.bold())
-//                        Text("\(entry.gallery.Details.asset!.count)")
-//                            .font(Font.title.bold())
-//                            .frame(minWidth: 0, maxWidth: 60, minHeight: 0, maxHeight: 60)
-//                    }
-//
-//                }
-//                .foregroundColor(.white)
-            }
-            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
-            .padding()
-            .background(Color.pink)
-            
-        case .systemMedium:  // bb
-            HStack {
                 VStack(alignment : .center){
-                    let data = entry.totgallery.allPhotos
+                    let data = entry.gallery.Details.asset
                     let img = getAssetThumbnail(assets: data as! [PHAsset])
                     Image(uiImage: img.first!)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                        .frame(width: 70, height: 70, alignment: .center)
+                        .frame(width: 100, height: 70, alignment: .center)
                         .clipped()
                         .shadow(radius: 2)
                         .cornerRadius(5.0)
                     HStack {
-                        Text("Photos")
-                        Text("\(entry.totgallery.allPhotos.count)").font(.body)
-                            .padding()
-                            .overlay(Circle().stroke(Color.blue, lineWidth: 2))
-                            .frame(minWidth: 0, maxWidth: 50, minHeight: 0, maxHeight: 50)
+                        Text("\(entry.gallery.Details.displayName!)").font(Font.subheadline)
+                            .multilineTextAlignment(.leading)
+                            .lineLimit(0)
+                            .frame(minWidth: 0, maxWidth: 60, minHeight: 0, maxHeight: 60)
+                        Text("\(entry.gallery.Details.asset!.count)")
+                            .font(Font.title.bold())
+                            .frame(minWidth: 0, maxWidth: 60, minHeight: 0, maxHeight: 60)
+                          
                     }
-                   
+
                 }
-                .padding().foregroundColor(.white)
-                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
-                VStack(alignment : .center) {
-                    let data = entry.totgallery.allVideos
-                    let img = getAssetThumbnail(assets: data as! [PHAsset])
-                    Image(uiImage: img.first!)
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 70, height: 70, alignment: .center)
-                        .clipShape(Circle())
-                        .shadow(radius: 2)
-                        .cornerRadius(5.0)
-                    
+                .foregroundColor(.white)
+            }
+            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
+            .padding()
+            .background(LinearGradient(gradient: Gradient(colors: [.yellow,.green]), startPoint: .top, endPoint: .bottom))
+            
+        default :
+            ZStack {
+                HStack {
                     HStack {
-                        Text("Videos")
-                        Text("\(entry.totgallery.allVideos.count)")
-                            .padding()
-                            .overlay(Circle().stroke(Color.blue, lineWidth: 2)
-                            )
-                            .frame(minWidth: 0, maxWidth: 50, minHeight: 0, maxHeight: 50)
-                    }
-                   
-                }.padding().frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
+                        let data = entry.gallery.Details.asset
+                        let img = getAssetThumbnail(assets: data as! [PHAsset])
+                        Image(uiImage: img.first!)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 130, height: 130)
+                            .clipped()
+                            .shadow(radius: 2)
+                            .cornerRadius(10.0)
+                    }.padding(.all , 10)
+                    .frame(alignment: .center)
+                    .padding(.top,10)
+
+                    HStack{
+                        VStack {
+                            Text("\(entry.gallery.Details.displayName!)").font(Font.largeTitle.bold())
+                            Text("\(entry.gallery.Details.asset!.count)")
+                                .font(Font.title.bold())
+                                .frame(minWidth: 0, maxWidth: 60, minHeight: 0, maxHeight: 60)
+                        }
+                    }.padding(.leading , 30)
+                }
+                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
+                .foregroundColor(.white)
+                .background(LinearGradient(gradient: Gradient(colors: [.green,.blue,.accentColor]), startPoint: .top, endPoint: .bottom))
             }
             .foregroundColor(.white)
             .background(LinearGradient(gradient: Gradient(colors: [.purple,.black]), startPoint: .top, endPoint: .bottom))
-            
-        default:  // bb
-            ZStack {
-                VStack {
-                    HStack{
-                        VStack{
-                            Text("Photos").font(.largeTitle)
-                            Text("\(entry.totgallery.allPhotos.count)").padding().font(.largeTitle)
-                                .overlay(Circle().stroke(Color.blue, lineWidth: 4)
-                                )
-                        }
-                        Image("gallery").resizable()
-                            .aspectRatio(contentMode: .fit)
-                    }
-                    .foregroundColor(.white)
-                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .center)
-                    VStack(alignment : .center){
-                        Text("Videos").font(.largeTitle)
-                        Text("\(entry.totgallery.allVideos.count)").padding().font(.largeTitle)
-                            .overlay(Circle().stroke(Color.blue, lineWidth: 4)
-                            )
-                    }
-                    .foregroundColor(.white)
-                    VStack(alignment : .center){
-                        Text("Screenshots").font(.largeTitle)
-                        Text("\(entry.totgallery.allScreenshots.count)").padding().font(.largeTitle)
-                            .overlay(Circle().stroke(Color.blue, lineWidth: 4)
-                            )
-                    }
-                    .foregroundColor(.white)
-                }
-            }
-            .foregroundColor(.white)
-            .background(LinearGradient(gradient: Gradient(colors: [.orange,.yellow]), startPoint: .top, endPoint: .bottom))
-            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
             
         }
     }

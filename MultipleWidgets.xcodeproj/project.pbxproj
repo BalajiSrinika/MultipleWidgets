@@ -11,6 +11,8 @@
 		F314B9EE24D1A65D00323D38 /* SampleIntentConfig.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = F3F6128724D1979F00A29C48 /* SampleIntentConfig.intentdefinition */; };
 		F314B9EF24D1A65E00323D38 /* SampleIntentConfig.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = F3F6128724D1979F00A29C48 /* SampleIntentConfig.intentdefinition */; };
 		F314B9F024D1A66200323D38 /* SampleIntentWidgets.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F6128524D1947000A29C48 /* SampleIntentWidgets.swift */; };
+		F314B9F624D1C35100323D38 /* FetchGetGallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = F314B9F524D1C35100323D38 /* FetchGetGallery.swift */; };
+		F314B9F724D1C35100323D38 /* FetchGetGallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = F314B9F524D1C35100323D38 /* FetchGetGallery.swift */; };
 		F32E95DF24D1A11F00C11CDF /* FetchingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F389F38824CEC20100D88BB5 /* FetchingData.swift */; };
 		F32E95E024D1A13F00C11CDF /* FetchingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F389F38824CEC20100D88BB5 /* FetchingData.swift */; };
 		F389F34224CEA87C00D88BB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F389F34124CEA87C00D88BB5 /* AppDelegate.swift */; };
@@ -67,6 +69,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F314B9F524D1C35100323D38 /* FetchGetGallery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchGetGallery.swift; sourceTree = "<group>"; };
 		F389F33E24CEA87C00D88BB5 /* MultipleWidgets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultipleWidgets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F389F34124CEA87C00D88BB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F389F34324CEA87C00D88BB5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -209,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				F389F38824CEC20100D88BB5 /* FetchingData.swift */,
+				F314B9F524D1C35100323D38 /* FetchGetGallery.swift */,
 			);
 			path = WidgetsSupportingFiles;
 			sourceTree = "<group>";
@@ -377,6 +381,7 @@
 				F389F34624CEA87C00D88BB5 /* ViewController.swift in Sources */,
 				F389F34224CEA87C00D88BB5 /* AppDelegate.swift in Sources */,
 				F389F34424CEA87C00D88BB5 /* SceneDelegate.swift in Sources */,
+				F314B9F624D1C35100323D38 /* FetchGetGallery.swift in Sources */,
 				F32E95E024D1A13F00C11CDF /* FetchingData.swift in Sources */,
 				F314B9EE24D1A65D00323D38 /* SampleIntentConfig.intentdefinition in Sources */,
 			);
@@ -405,6 +410,7 @@
 				F314B9F024D1A66200323D38 /* SampleIntentWidgets.swift in Sources */,
 				F3F6128424D188AF00A29C48 /* AdditionalTimelineWidget.swift in Sources */,
 				F32E95DF24D1A11F00C11CDF /* FetchingData.swift in Sources */,
+				F314B9F724D1C35100323D38 /* FetchGetGallery.swift in Sources */,
 				F314B9EF24D1A65E00323D38 /* SampleIntentConfig.intentdefinition in Sources */,
 				F314B9DD24D1A40000323D38 /* SampleTimelineWidget.swift in Sources */,
 			);
